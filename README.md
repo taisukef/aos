@@ -1,72 +1,53 @@
-[![AOS - Animate on scroll library](https://s32.postimg.org/ktvt59hol/aos_header.png)](http://michalsnik.github.io/aos/)
+# AOS-es
 
-[![NPM version](https://img.shields.io/npm/v/aos/next.svg?style=flat)](https://npmjs.org/package/aos)
-[![NPM downloads](https://img.shields.io/npm/dm/aos.svg?style=flat)](https://npmjs.org/package/aos)
-[![Build Status](https://travis-ci.org/michalsnik/aos.svg?branch=master)](https://travis-ci.org/michalsnik/aos)
-[![Gitter](https://badges.gitter.im/michalsnik/aos.svg)](https://gitter.im/michalsnik/aos?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+Animate On Scroll ES Module forked from [AOS.js aos@next](https://github.com/michalsnik/aos)
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/michalsnik.svg?style=social)](https://twitter.com/michalsnik) [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/home?status=AOS%20-%20Animate%20on%20Scroll%20library%0Ahttps%3A//github.com/michalsnik/aos)
+## Demo
 
-## :exclamation::exclamation::exclamation: This is README for aos@next :exclamation::exclamation::exclamation:
+- https://taisukef.github.io/aos/demo/all.html
 
-For last stable release (v2) go [here](https://github.com/michalsnik/aos/tree/v2)
-
----
-### 🚀 [Demo](http://michalsnik.github.io/aos/)
-
-### 🌟 Codepen Examples
-- [Different built-in animations](http://codepen.io/michalsnik/pen/WxNdvq)
-- [With anchor setting in use](http://codepen.io/michalsnik/pen/jrOYVO)
-- [With anchor-placement and different easings](http://codepen.io/michalsnik/pen/EyxoNm)
-- [With simple custom animations](http://codepen.io/michalsnik/pen/WxvNvE)
-
-👉 To get a better understanding how this actually works, I encourage you to check [my post on CSS-tricks](https://css-tricks.com/aos-css-driven-scroll-animation-library/).
-
----
-
-## ⚙ Installation
+## How to use
 
 ### Basic
 
-Add styles in `<head>`:
-
+1. add script:
 ```html
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script type="module" src="https://taisukef.github.io/aos/AOS-es.js"></script>
 ```
 
-Add script right before closing `</body>` tag, and initialize AOS:
+2. Set animation using `data-aos` attribute:
 ```html
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <div data-aos="fade-in"></div>
 ```
 
-### Using package managers
+And adjust behaviour by using `data-aos-*` attributes:
+```html
+  <div
+    data-aos="fade-up"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center"
+  >
+  </div>
+```
+[See full list of all animations, easings and anchor placements](#animations)
 
-Install `aos` package:
-* `yarn add aos@next`
-* or `npm install --save aos@next`
-
-Import script, styles and initialize AOS:
-```js
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
-AOS.init();
+3. Adjuset default behaviour with aos-es tag:
+```html
+<aos-es data-aos-duration="4000"></aos-es>
 ```
 
-In order to make it work you'll have to make sure your build process has configured styles loader, and bundles it all correctly.
-If you're using [Parcel](https://parceljs.org/) however, it will work out of the box as provided.
-
----
-
-
-## 🤔 How to use it?
+## Advanced
 
 ### 1. Initialize AOS:
 
 ```js
+import AOS from "https://taisukef.github.io/aos-es/AOS.js";
+
 AOS.init();
 
 // You can also pass an optional settings object
@@ -94,29 +75,6 @@ AOS.init({
 
 });
 ```
-
-### 2. Set animation using `data-aos` attribute:
-
-```html
-  <div data-aos="fade-in"></div>
-```
-
-And adjust behaviour by using `data-aos-*` attributes:
-```html
-  <div
-    data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-delay="50"
-    data-aos-duration="1000"
-    data-aos-easing="ease-in-out"
-    data-aos-mirror="true"
-    data-aos-once="false"
-    data-aos-anchor-placement="top-center"
-  >
-  </div>
-```
-
-[See full list of all animations, easings and anchor placements](https://github.com/michalsnik/aos#animations)
 
 #### Anchor
 
