@@ -1,7 +1,7 @@
 /* Clearing variables */
 
-import { getPositionIn, getPositionOut } from './offsetCalculator';
-import getInlineOption from './getInlineOption';
+import { getPositionIn, getPositionOut } from './offsetCalculator.js';
+import getInlineOption from './getInlineOption.js';
 
 const prepare = function($elements, options) {
   $elements.forEach((el, i) => {

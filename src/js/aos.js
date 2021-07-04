@@ -4,18 +4,17 @@
  * made to animate elements on scroll in both directions
  * *******************************************************
  */
-import styles from './../sass/aos.scss';
+//import styles from './../sass/aos.scss';
 
 // Modules & helpers
-import throttle from 'lodash.throttle';
-import debounce from 'lodash.debounce';
+import { throttle, debounce } from 'https://taisukef.github.io/lodash/es/lodash.js';
 
-import observer from './libs/observer';
+import observer from './libs/observer.js';
 
-import detect from './helpers/detector';
-import handleScroll from './helpers/handleScroll';
-import prepare from './helpers/prepare';
-import elements from './helpers/elements';
+import detect from './helpers/detector.js';
+import handleScroll from './helpers/handleScroll.js';
+import prepare from './helpers/prepare.js';
+import elements from './helpers/elements.js';
 
 /**
  * Private variables
@@ -227,5 +226,6 @@ const init = function init(settings) {
 export default {
   init,
   refresh,
-  refreshHard
+  refreshHard,
+  options,
 };

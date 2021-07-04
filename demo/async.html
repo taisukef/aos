@@ -5,34 +5,33 @@
     <title>AOS - Animate on scroll library</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="dist/aos.css" />
-    <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
   </head>
   <body>
     <div id="aos-demo" class="aos-all"></div>
 
-    <script src="dist/aos.js"></script>
-    <script>
-      if (!window.Cypress) {
-        AOS.init();
-        setInterval(addItem, 150);
-      } else {
-        document.addEventListener('add-aos-item', addItem);
-      }
+    <script type="module">
+      import { AOS } from "../AOS.js";
 
-      var itemsCounter = 1;
-      var container = document.getElementById('aos-demo');
-
-      function addItem () {
-        if (itemsCounter > 24) return;
-        var item = document.createElement('div');
+      const container = document.getElementById('aos-demo');
+      let itemsCounter = 1;
+      const addItem = () => {
+        if (itemsCounter > 24) {
+          return;
+        }
+        const item = document.createElement('div');
         item.classList.add('aos-item');
         item.setAttribute('data-id', itemsCounter);
         item.setAttribute('data-aos', 'fade-up');
         container.appendChild(item);
         itemsCounter++;
+      };
+      
+
+      if (!window.Cypress) {
+        AOS.init();
+        setInterval(addItem, 150);
+      } else {
+        document.addEventListener('add-aos-item', addItem);
       }
     </script>
   </body>
