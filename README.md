@@ -4,7 +4,7 @@ Animate On Scroll ES Module forked from [AOS.js aos@next](https://github.com/mic
 
 ## Demo
 
-- https://taisukef.github.io/aos/demo/all.html
+- https://taisukef.github.io/aos-es/demo/all.html
 
 ## How to use
 
@@ -12,7 +12,7 @@ Animate On Scroll ES Module forked from [AOS.js aos@next](https://github.com/mic
 
 1. add script:
 ```html
-<script type="module" src="https://taisukef.github.io/aos/AOS-es.js"></script>
+<script type="module" src="https://taisukef.github.io/aos-es/AOS-es.js"></script>
 ```
 
 2. Set animation using `data-aos` attribute:
