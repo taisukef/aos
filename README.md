@@ -17,22 +17,23 @@ Animate On Scroll ES Module forked from [AOS.js aos@next](https://github.com/mic
 
 2. Set animation using `data-aos` attribute:
 ```html
-  <div data-aos="fade-in"></div>
+<div data-aos="fade-in"></div>
 ```
+[See full list of all animations](#animations)
 
 And adjust behaviour by using `data-aos-*` attributes:
 ```html
-  <div
-    data-aos="fade-up"
-    data-aos-offset="200"
-    data-aos-delay="50"
-    data-aos-duration="1000"
-    data-aos-easing="ease-in-out"
-    data-aos-mirror="true"
-    data-aos-once="false"
-    data-aos-anchor-placement="top-center"
-  >
-  </div>
+<div
+  data-aos="fade-up"
+  data-aos-offset="200"
+  data-aos-delay="50"
+  data-aos-duration="1000"
+  data-aos-easing="ease-in-out"
+  data-aos-mirror="true"
+  data-aos-once="false"
+  data-aos-anchor-placement="top-center"
+>
+</div>
 ```
 [See full list of all animations, easings and anchor placements](#animations)
 
