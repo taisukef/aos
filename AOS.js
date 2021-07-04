@@ -1,7 +1,7 @@
 import AOS from "./src/js/aos.js";
 import { css } from "https://js.sabae.cc/stdom.js";
 
-css("../aos.css");
+css("https://taisukef.github.io/aos-es/AOS.css");
 AOS.init();
 
 class AOSES extends HTMLElement {
